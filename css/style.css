@@ -4,13 +4,20 @@
 }
 
 .page-body {
-  -basic-black: #000000;
+  --basic-black: #000000;
   --basic-white: #ffffff;
-  --basic-extra-dark: #283136;
-  --basic-extra-light: #eeeeee;
+  --basic-text: #283136;
+  --basic-bg: #eeeeee;
 
-  --basic-extra-dark: #242424;
-  --basic-neutral: #e5e5e5;
+  --secondary-text: #444444;
+  --secondary-text-ligher: #666666;
 
-  --special: #663d15;
+  --red: #fb565a;
+  --yellow: #efc849;
+  --green: #00ca74;
+
+  --icon: #a6a6a6;
+  --bg-icon: #e1e1e1;
+  --slider: #c1c1c1;
+  --form-border: #d7dcde;
 }
