@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
@@ -20,4 +21,13 @@
   --bg-icon: #e1e1e1;
   --slider: #c1c1c1;
   --form-border: #d7dcde;
+}
+
+.container {
+  margin: auto;
+  max-width: 1100px;
+}
+
+.header {
+  background: var(--basic-bg);
 }
