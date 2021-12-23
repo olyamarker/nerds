@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.page-body {
+  -basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-extra-dark: #283136;
+  --basic-extra-light: #eeeeee;
+
+  --basic-extra-dark: #242424;
+  --basic-neutral: #e5e5e5;
+
+  --special: #663d15;
+}
