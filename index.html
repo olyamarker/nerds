@@ -123,7 +123,7 @@
           наб. Реки Карповки, 5 лит П, Санкт-Петербург <br /><br />+7 800
           555-86-28
         </p>
-        <button>Напишите нам</button>
+        <button type="button">Напишите нам</button>
       </section>
       <section>
         <h2>Мы в социальных сетях</h2>
@@ -142,5 +142,28 @@
         <p>Скидка 10% для друзей из социальных сетей.</p>
       </section>
     </footer>
+    <section>
+      <h2>Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label
+          >Ваше имя:
+          <input name="name" type="text" placeholder="Имя Фамилия" />
+        </label>
+        <label
+          >Ваш email:
+          <input type="email" name="email" placeholder="email@example.com" />
+        </label>
+        <label>
+          <textarea
+            name="text"
+            cols="30"
+            rows="10"
+            placeholder="В свободной форме"
+          ></textarea>
+        </label>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
   </body>
 </html>
