@@ -15,7 +15,7 @@
     <header class="header">
       <div class="container">
         <nav>
-          <a>
+          <a href="index.html">
             <!-- добавить href в каталоге -->
             <img
               src="img/nerds-logo.svg"
@@ -27,99 +27,200 @@
           <ul>
             <li><a href="blank.html">Студия</a></li>
             <li><a href="blank.html">Клиенты</a></li>
-            <li><a href="catalog.html">Магазин</a></li>
+            <li><a>Магазин</a></li>
             <li><a href="blank.html">Контакты</a></li>
           </ul>
           <a href="blank.html">Вход</a>
         </nav>
-        <!-- Здесь будет слайдер -->
       </div>
     </header>
     <main class="main container">
-      <h1>Дизайн-студия «Нёрдс»</h1>
+      <h1>Магазин готовых шаблонов</h1>
       <section>
-        <h2>Услуги</h2>
+        <h2>Фильтр шаблонов</h2>
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Стоимость:</legend>
+            <!-- Здесь надо доработать слайдер цены -->
+            <input
+              type="range"
+              id="priceSlider"
+              name="priceSlider"
+              min="0"
+              max="150000"
+              step="1"
+            />
+            <label>От<input type="text" name="from" value="0" /></label>
+            <label>До<input type="text" name="to" value="15000" /></label>
+          </fieldset>
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul>
+              <li>
+                <label
+                  ><input type="radio" name="grid" checked />Адаптивная</label
+                >
+              </li>
+              <li>
+                <label><input type="radio" name="grid" />Фиксированная</label>
+              </li>
+              <li>
+                <label><input type="radio" name="grid" />Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" name="slider" checked />Слайдер
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="benefits" />Блок
+                  преимуществ</label
+                >
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="news" checked />Новости</label
+                >
+              </li>
+              <li>
+                <label> <input type="checkbox" name="gallery" />Галерея</label>
+              </li>
+              <li>
+                <label> <input type="checkbox" name="basket" />Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </section>
+      <section>
+        <h2>Сортировать:</h2>
         <ul>
           <li>
-            <h3>Веб-сайты</h3>
-            <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            <img src="img/services/illustration-1.png" alt="" />
-            <a href="blank.html">Заказать</a>
+            <a href="#">По цене:</a>
           </li>
           <li>
-            <h3>Приложения</h3>
-            <p>Покорите топ-10 приложений в AppStore<br />и Google Play</p>
-            <img src="img/services/illustration-2.png" alt="" />
-            <a href="blank.html">Заказать</a>
+            <a href="#">По типу:</a>
           </li>
           <li>
-            <h3>Презентации</h3>
-            <p>Вы даже не подозреваете,<br />насколько вы изумительны!</p>
-            <img src="img/services/illustration-3.png" alt="" />
-            <a href="blank.html">Заказать</a>
+            <a href="#">По названию:</a>
           </li>
+          <button type="button"></button>
+          <button type="button"></button>
         </ul>
       </section>
       <section>
-        <h2>О компании</h2>
-        <p>Мы — маленькая, но гордая<br />дизайн-студия из Краснодара.</p>
-        <p>
-          Исповедуем принципы минимализма и чистоты. Ставим математический
-          расчет<br />превыше креатива. Работаем не покладая рук, как роботы.
-        </p>
-        <p>Выполняем заказы на разработку:</p>
+        <h2>Список шаблонов</h2>
         <ul>
-          <li>Веб-сайтов любой сложности</li>
-          <li>Мобильных приложений для iOS и Android</li>
-          <li>Слайдшоу и видео для корпоративных презентаций</li>
+          <li>
+            <img
+              src="img/templates/sedona.png"
+              alt="Макет «Sedona»"
+              width="358"
+              height="578"
+            />
+            <p>
+              <a href="#">
+                <h3>Sedona</h3>
+              </a>
+              Информационный сайт для туристов
+              <button type="button">9 900 ₽</button>
+            </p>
+          </li>
+          <li>
+            <img
+              src="img/templates/pink.png"
+              alt="Макет «Pink App»"
+              width="358"
+              height="578"
+            />
+            <p>
+              <a href="#">
+                <h3>Pink App</h3>
+              </a>
+              Продуктовый лендинг приложения для iOS и Android
+              <button type="button">9 900 ₽</button>
+            </p>
+          </li>
+          <li>
+            <img
+              src="img/templates/barbershop.png"
+              alt="Макет «Barbershop»"
+              width="358"
+              height="578"
+            />
+            <p>
+              <a href="#">
+                <h3>Barbershop</h3>
+              </a>
+              Сайт салона красоты. Для мужчин, да.
+              <button type="button">9 900 ₽</button>
+            </p>
+          </li>
+          <li>
+            <img
+              src="img/templates/mishka.png"
+              alt="Макет «Mishka»"
+              width="358"
+              height="578"
+            />
+            <p>
+              <a href="#">
+                <h3>Mishka</h3>
+              </a>
+              Интернет-магазин вязаных игрушек
+              <button type="button">9 900 ₽</button>
+            </p>
+          </li>
+          <li>
+            <img
+              src="img/templates/aplus.png"
+              alt="Макет «A Plus»"
+              width="358"
+              height="578"
+            />
+            <p>
+              <a href="#">
+                <h3>A Plus</h3>
+              </a>
+              Лендинг курсов повышения квалификации
+              <button type="button">9 900 ₽</button>
+            </p>
+          </li>
+          <li>
+            <img
+              src="img/templates/kvast.png"
+              alt="Макет «Кваст»"
+              width="358"
+              height="578"
+            />
+            <p>
+              <a href="#">
+                <h3>Кваст</h3>
+              </a>
+              Промо-сайт производителя крафтового кваса
+              <button type="button">9 900 ₽</button>
+            </p>
+          </li>
         </ul>
-        <img src="img/nerds-illustration.png" alt="" />
-        <p>с 2004 года Любим точность во всем:</p>
-        <dl>
-          <dt>146%</dt>
-          <dd>Уровень самоотдачи</dd>
-
-          <dt>100%</dt>
-          <dd>Соблюдение сроков</dd>
-
-          <dt>50%</dt>
-          <dd>Минимальная предоплата</dd>
-        </dl>
-      </section>
-      <section>
-        <h2>Клиенты</h2>
         <ul>
           <li>
-            <img
-              width="199"
-              height="57"
-              src="img/clients/logo-htmlacademy.svg"
-              alt="Логотип: «Html Academy»"
-            />
+            <a>1</a>
           </li>
           <li>
-            <img
-              width="209"
-              height="90"
-              src="img/clients/logo-borodinski.png"
-              alt="Логотип: «Бородинский»"
-            />
+            <a href="#">2</a>
           </li>
           <li>
-            <img
-              width="185"
-              height="52"
-              src="img/clients/logo-pink.png"
-              alt="Логотип: «Pink»"
-            />
+            <a href="#">3</a>
           </li>
           <li>
-            <img
-              width="173"
-              height="84"
-              src="img/clients/logo-mishka.png"
-              alt="Логотип: «Мишка»"
-            />
+            <a href="#">Следующая</a>
           </li>
         </ul>
       </section>
