@@ -19,9 +19,8 @@
   <body class="page-body">
     <header class="header">
       <div class="container">
-        <nav>
+        <nav class="nav">
           <a>
-            <!-- добавить href в каталоге -->
             <img
               src="img/nerds-logo.svg"
               width="160"
@@ -35,27 +34,55 @@
             <li><a href="catalog.html">Магазин</a></li>
             <li><a href="blank.html">Контакты</a></li>
           </ul>
-          <a href="blank.html">Вход</a>
+          <div>
+            <img class="icon-cart" src="img/icons/cart.svg" alt="" />
+            <a class="login" href="blank.html">Корзина</a>
+          </div>
         </nav>
+        <div class="slide slide-1">
+          <p class="slide-text-large">Долго, дорого, <br />скрупулезно.</p>
+          <p class="slide-text">
+            Математически выверенный дизайн <br />для вашего сайта или
+            мобильного приложения.
+          </p>
+          <a class="button slide-button">Узнать больше</a>
+        </div>
+        <div class="slide slide-2 hidden">
+          <p class="slide-text-large">
+            Любим математику <br />как никто другой
+          </p>
+          <p class="slide-text">
+            Никакого креатива, только математические формулы для расчета
+            идеальных пропорций
+          </p>
+          <a class="button slide-button">Узнать больше</a>
+        </div>
+        <div class="slide slide-3 hidden">
+          <p class="slide-text-large">Только ночь, <br />только хардкор</p>
+          <p class="slide-text">
+            Работать днем, как все? Мы против этого.<br />Ближе к полуночи
+            работа только начинается.
+          </p>
+          <a class="button slide-button">Узнать больше</a>
+        </div>
       </div>
     </header>
     <main class="main container">
-      <h1>Дизайн-студия «Нёрдс»</h1>
-      <!-- Здесь будет слайдер -->
-      <section>
-        <h2>Услуги</h2>
-        <ul>
+      <h1 class="hidden">Дизайн-студия «Нёрдс»</h1>
+      <section class="services">
+        <h2 class="hidden">Услуги</h2>
+        <ul class="services-list">
           <li>
             <h3>Веб-сайты</h3>
             <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
             <img src="img/services/sites.png" width="300" height="146" alt="" />
-            <a href="blank.html">Заказать</a>
+            <a class="button services-button" href="blank.html">Заказать</a>
           </li>
           <li>
             <h3>Приложения</h3>
-            <p>Покорите топ-10 приложений в AppStore<br />и Google Play</p>
+            <p>Покорите топ-10 приложений <br />в AppStore и Google Play</p>
             <img src="img/services/apps.png" width="300" height="146" alt="" />
-            <a href="blank.html">Заказать</a>
+            <a class="button services-button" href="blank.html">Заказать</a>
           </li>
           <li>
             <h3>Презентации</h3>
@@ -66,38 +93,53 @@
               height="146"
               alt=""
             />
-            <a href="blank.html">Заказать</a>
+            <a class="button services-button" href="blank.html">Заказать</a>
           </li>
         </ul>
       </section>
-      <section>
-        <h2>О компании</h2>
-        <p>Мы — маленькая, но гордая<br />дизайн-студия из Краснодара.</p>
-        <p>
-          Исповедуем принципы минимализма и чистоты. Ставим математический
-          расчет<br />превыше креатива. Работаем не покладая рук, как роботы.
-        </p>
-        <p>Выполняем заказы на разработку:</p>
-        <ul>
-          <li>Веб-сайтов любой сложности</li>
-          <li>Мобильных приложений для iOS и Android</li>
-          <li>Слайдшоу и видео для корпоративных презентаций</li>
-        </ul>
-        <img src="img/nerds-illustration.png" width="360" height="208" alt="" />
-        <p>с 2004 года Любим точность во всем:</p>
-        <dl>
-          <dt>146%</dt>
-          <dd>Уровень самоотдачи</dd>
-
-          <dt>100%</dt>
-          <dd>Соблюдение сроков</dd>
-
-          <dt>50%</dt>
-          <dd>Минимальная предоплата</dd>
-        </dl>
+      <section class="about">
+        <div class="about-left">
+          <h2 class="hidden">О компании</h2>
+          <p class="about-text-large">
+            Мы — маленькая, но гордая<br />дизайн-студия из Краснодара.
+          </p>
+          <p class="about-text">
+            Исповедуем принципы минимализма и чистоты. Ставим математический
+            расчет<br />превыше креатива. Работаем не покладая рук, как роботы.
+          </p>
+          <p class="about-text-bold">Выполняем заказы на разработку:</p>
+          <ul class="about-list">
+            <li>Веб-сайтов любой сложности</li>
+            <li>Мобильных приложений для iOS и Android</li>
+            <li>Слайдшоу и видео для корпоративных презентаций</li>
+          </ul>
+        </div>
+        <div class="about-data">
+          <img
+            src="img/nerds-illustration.png"
+            width="360"
+            height="208"
+            alt=""
+          />
+          <p>с 2004 года Любим точность во всем:</p>
+          <dl>
+            <div class="about-data-pair">
+              <dt>146<small>%</small></dt>
+              <dd>Уровень самоотдачи</dd>
+            </div>
+            <div class="about-data-pair">
+              <dt>100<small>%</small></dt>
+              <dd>Соблюдение сроков</dd>
+            </div>
+            <div class="about-data-pair">
+              <dt>50<small>%</small></dt>
+              <dd>Минимальная предоплата</dd>
+            </div>
+          </dl>
+        </div>
       </section>
-      <section>
-        <h2>Клиенты</h2>
+      <section class="clients">
+        <h2 class="hidden">Клиенты</h2>
         <ul>
           <li>
             <img
@@ -135,38 +177,55 @@
       </section>
     </main>
     <footer>
-      <section>
+      <section class="contacts">
         <div class="container">
-          <h2>Контакты</h2>
-          <p>Nёrds design studio</p>
-          <p>
-            наб. Реки Карповки, 5 лит П, Санкт-Петербург <br /><br />+7 800
-            555-86-28
-          </p>
-          <button type="button">Напишите нам</button>
+          <h2 class="hidden">Контакты</h2>
+          <div class="contacts-block">
+            <h4>Nёrds design studio</h4>
+            <address>наб. Реки Карповки, 5 лит П, Санкт-Петербург</address>
+            <a href="tel:+7800558628">+7 800 555-86-28</a>
+            <button class="button contacts-button" type="button">
+              Напишите нам
+            </button>
+          </div>
         </div>
       </section>
-      <section class="container">
-        <h2>Мы в социальных сетях</h2>
-        <ul>
+      <section class="social-media container">
+        <ul class="social-media-list">
           <li>
-            <a href="#"
-              ><img src="" width="26" height="15" alt="Логотип: Вконтакте"
+            <a class="social-media-icon" href="#"
+              ><img
+                src="img\icons\vk.svg"
+                width="26"
+                height="15"
+                alt="Логотип: Вконтакте"
             /></a>
           </li>
           <li>
-            <a href="#"
-              ><img src="" width="12" height="22" alt="Логотип: Facebook"
+            <a class="social-media-icon" href="#"
+              ><img
+                src="img\icons\facebook.svg"
+                width="12"
+                height="22"
+                alt="Логотип: Facebook"
             /></a>
           </li>
           <li>
-            <a href="#"
-              ><img src="" width="21" height="21" alt="Логотип: Instagram"
+            <a class="social-media-icon" href="#"
+              ><img
+                src="img\icons\instagram.svg"
+                width="21"
+                height="21"
+                alt="Логотип: Instagram"
             /></a>
           </li>
         </ul>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <div class="social-media-text">
+          <p class="social-media-text-large">Давайте дружить, это выгодно!</p>
+          <p class="social-media-sale">
+            Скидка 10% для друзей из социальных сетей.
+          </p>
+        </div>
       </section>
     </footer>
     <section>
