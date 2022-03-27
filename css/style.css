@@ -26,7 +26,9 @@
 }
 .container {
   margin: auto;
-  max-width: 1160px;
+  max-width: 1190px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 a {
@@ -81,6 +83,11 @@ img {
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
+}
+
+.current-page-link {
+  padding-bottom: 13px;
+  border-bottom: 2px solid var(--red);
 }
 
 .login {
@@ -140,10 +147,117 @@ img {
   color: var(--basic-white);
   border: none;
   background-color: var(--red);
+  cursor: pointer;
 }
 
 .slide-button {
   margin-top: 38px;
+}
+
+.h1 {
+  text-align: center;
+  padding-top: 72px;
+  padding-bottom: 108px;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-black);
+}
+
+/* Основное содержимое */
+
+/* Каталог */
+
+.catalog {
+  display: grid;
+  grid-template-columns: 260px 760px;
+  grid-column-gap: 140px;
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  height: 80px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--basic-bg);
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--form-border);
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: var(--green);
+}
+
+.range-controls .toggle {
+  box-sizing: content-box;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--icon);
+  border-radius: 50%;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.price-controls input {
+  width: 80px;
+  height: 38px;
+  margin-left: 10px;
+  text-align: center;
+  color: var(--basic-text);
+  border: none;
+  border-radius: 5px;
+  background: var(--basic-bg);
+  font-family: inherit;
+  font-size: inherit;
 }
 
 /* Услуги */
@@ -155,11 +269,13 @@ img {
 }
 
 .services-list {
-  display: flex;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 100px;
 }
 
 .services-list li {
-  margin-right: 100px;
   display: flex;
   flex-direction: column;
   max-width: 300px;
@@ -395,4 +511,87 @@ img {
   font-size: 16px;
   line-height: 22px;
   color: var(--secondary-text);
+}
+
+/* Модальное окно */
+
+.modal {
+  position: fixed;
+  padding: 63px 100px 84px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--basic-white);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.modal h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  color: var(--basic-black);
+}
+
+.modal form {
+  margin-top: 37px;
+}
+
+.modal-inputs-wrapper {
+  display: flex;
+}
+
+.modal label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.modal-name {
+  margin-right: 40px;
+}
+
+.modal-textarea {
+  margin-top: 34px;
+}
+
+.modal input,
+.modal textarea {
+  margin-top: 9px;
+  padding: 16px;
+  height: 50px;
+  width: 360px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  opacity: 0.5;
+  color: var(--secondary-text);
+  border: 2px solid var(--form-border);
+  border-radius: 3px;
+}
+
+.modal textarea {
+  width: 100%;
+  height: 118px;
+  resize: none;
+}
+
+.modal-button {
+  margin-top: 47px;
+}
+
+.close {
+  position: absolute;
+  top: 78px;
+  right: 90px;
+  border: none;
+  background: transparent;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 1;
 }

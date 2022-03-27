@@ -29,7 +29,7 @@
             />
           </a>
           <ul>
-            <li><a href="blank.html">Студия</a></li>
+            <li><a class="current-page-link">Студия</a></li>
             <li><a href="blank.html">Клиенты</a></li>
             <li><a href="catalog.html">Магазин</a></li>
             <li><a href="blank.html">Контакты</a></li>
@@ -228,18 +228,21 @@
         </div>
       </section>
     </footer>
-    <section>
+    <section class="modal hidden">
       <h2>Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <label
-          >Ваше имя:
-          <input name="name" type="text" placeholder="Имя Фамилия" />
-        </label>
-        <label
-          >Ваш email:
-          <input type="email" name="email" placeholder="email@example.com" />
-        </label>
-        <label>
+        <div class="modal-inputs-wrapper">
+          <label class="modal-name"
+            >Ваше имя:
+            <input name="name" type="text" placeholder="Имя Фамилия" />
+          </label>
+          <label
+            >Ваш email:
+            <input type="email" name="email" placeholder="email@example.com" />
+          </label>
+        </div>
+        <label class="modal-textarea">
+          Текст письма:
           <textarea
             name="text"
             cols="30"
@@ -247,9 +250,11 @@
             placeholder="В свободной форме"
           ></textarea>
         </label>
-        <button type="submit">Отправить</button>
+        <button class="button modal-button" type="submit">Отправить</button>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="close" type="button">
+        <img src="img/icons/close.svg" alt="Закрыть" />
+      </button>
     </section>
   </body>
 </html>

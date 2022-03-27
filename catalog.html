@@ -29,9 +29,9 @@
             />
           </a>
           <ul>
-            <li><a href="blank.html">Студия</a></li>
+            <li><a href="index.html">Студия</a></li>
             <li><a href="blank.html">Клиенты</a></li>
-            <li><a>Магазин</a></li>
+            <li><a class="current-page-link">Магазин</a></li>
             <li><a href="blank.html">Контакты</a></li>
           </ul>
           <div>
@@ -40,27 +40,41 @@
           </div>
         </nav>
       </div>
+      <h1 class="h1 container">Магазин готовых шаблонов</h1>
     </header>
-    <main class="main container">
-      <h1>Магазин готовых шаблонов</h1>
-      <section>
-        <h2>Фильтр шаблонов</h2>
+    <main class="main catalog container">
+      <section class="filter">
+        <h2 class="hidden">Фильтр шаблонов</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
+          <fieldset class="filter-item">
             <legend>Стоимость:</legend>
-            <!-- Здесь надо доработать слайдер цены -->
-            <input
-              type="range"
-              id="priceSlider"
-              name="priceSlider"
-              min="0"
-              max="150000"
-              step="1"
-            />
-            <label>От<input type="text" name="from" value="0" /></label>
-            <label>До<input type="text" name="to" value="15000" /></label>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 30%; margin-left: 20%"></div>
+                </div>
+                <div
+                  class="toggle toggle-min"
+                  tabindex="0"
+                  style="left: 20%"
+                ></div>
+                <div
+                  class="toggle toggle-max"
+                  tabindex="0"
+                  style="left: 50%"
+                ></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0" />
+                </label>
+                <label class="max-price">
+                  до <input type="number" name="max-price" value="15000" />
+                </label>
+              </div>
+            </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-item">
             <legend>Сетка:</legend>
             <ul>
               <li>
@@ -76,7 +90,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-item">
             <legend>Особенности:</legend>
             <ul>
               <li>
@@ -106,179 +120,201 @@
           <button type="submit">Показать</button>
         </form>
       </section>
-      <section>
-        <h2>Сортировать:</h2>
-        <ul>
-          <li>
-            <a href="#">По цене:</a>
-          </li>
-          <li>
-            <a href="#">По типу:</a>
-          </li>
-          <li>
-            <a href="#">По названию:</a>
-          </li>
-          <button type="button"></button>
-          <button type="button"></button>
-        </ul>
-      </section>
-      <section>
-        <h2>Список шаблонов</h2>
-        <ul>
-          <li>
-            <img
-              src="img/templates/sedona.png"
-              alt="Макет «Sedona»"
-              width="358"
-              height="578"
-            />
-            <p>
-              <a href="#">
-                <h3>Sedona</h3>
-              </a>
-              Информационный сайт для туристов
-              <button type="button">9 900 ₽</button>
-            </p>
-          </li>
-          <li>
-            <img
-              src="img/templates/pink.png"
-              alt="Макет «Pink App»"
-              width="358"
-              height="578"
-            />
-            <p>
-              <a href="#">
-                <h3>Pink App</h3>
-              </a>
-              Продуктовый лендинг приложения для iOS и Android
-              <button type="button">9 900 ₽</button>
-            </p>
-          </li>
-          <li>
-            <img
-              src="img/templates/barbershop.png"
-              alt="Макет «Barbershop»"
-              width="358"
-              height="578"
-            />
-            <p>
-              <a href="#">
-                <h3>Barbershop</h3>
-              </a>
-              Сайт салона красоты. Для мужчин, да.
-              <button type="button">9 900 ₽</button>
-            </p>
-          </li>
-          <li>
-            <img
-              src="img/templates/mishka.png"
-              alt="Макет «Mishka»"
-              width="358"
-              height="578"
-            />
-            <p>
-              <a href="#">
-                <h3>Mishka</h3>
-              </a>
-              Интернет-магазин вязаных игрушек
-              <button type="button">9 900 ₽</button>
-            </p>
-          </li>
-          <li>
-            <img
-              src="img/templates/aplus.png"
-              alt="Макет «A Plus»"
-              width="358"
-              height="578"
-            />
-            <p>
-              <a href="#">
-                <h3>A Plus</h3>
-              </a>
-              Лендинг курсов повышения квалификации
-              <button type="button">9 900 ₽</button>
-            </p>
-          </li>
-          <li>
-            <img
-              src="img/templates/kvast.png"
-              alt="Макет «Кваст»"
-              width="358"
-              height="578"
-            />
-            <p>
-              <a href="#">
-                <h3>Кваст</h3>
-              </a>
-              Промо-сайт производителя крафтового кваса
-              <button type="button">9 900 ₽</button>
-            </p>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a>1</a>
-          </li>
-          <li>
-            <a href="#">2</a>
-          </li>
-          <li>
-            <a href="#">3</a>
-          </li>
-          <li>
-            <a href="#">Следующая</a>
-          </li>
-        </ul>
-      </section>
+      <div class="grid-wrapper">
+        <section>
+          <h2>Сортировать:</h2>
+          <ul>
+            <li>
+              <a href="#">По цене:</a>
+            </li>
+            <li>
+              <a href="#">По типу:</a>
+            </li>
+            <li>
+              <a href="#">По названию:</a>
+            </li>
+            <button type="button"></button>
+            <button type="button"></button>
+          </ul>
+        </section>
+        <section>
+          <h2>Список шаблонов</h2>
+          <ul>
+            <li>
+              <img
+                src="img/templates/sedona.png"
+                alt="Макет «Sedona»"
+                width="358"
+                height="578"
+              />
+              <p>
+                <a href="#">
+                  <h3>Sedona</h3>
+                </a>
+                Информационный сайт для туристов
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+            <li>
+              <img
+                src="img/templates/pink.png"
+                alt="Макет «Pink App»"
+                width="358"
+                height="578"
+              />
+              <p>
+                <a href="#">
+                  <h3>Pink App</h3>
+                </a>
+                Продуктовый лендинг приложения для iOS и Android
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+            <li>
+              <img
+                src="img/templates/barbershop.png"
+                alt="Макет «Barbershop»"
+                width="358"
+                height="578"
+              />
+              <p>
+                <a href="#">
+                  <h3>Barbershop</h3>
+                </a>
+                Сайт салона красоты. Для мужчин, да.
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+            <li>
+              <img
+                src="img/templates/mishka.png"
+                alt="Макет «Mishka»"
+                width="358"
+                height="578"
+              />
+              <p>
+                <a href="#">
+                  <h3>Mishka</h3>
+                </a>
+                Интернет-магазин вязаных игрушек
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+            <li>
+              <img
+                src="img/templates/aplus.png"
+                alt="Макет «A Plus»"
+                width="358"
+                height="578"
+              />
+              <p>
+                <a href="#">
+                  <h3>A Plus</h3>
+                </a>
+                Лендинг курсов повышения квалификации
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+            <li>
+              <img
+                src="img/templates/kvast.png"
+                alt="Макет «Кваст»"
+                width="358"
+                height="578"
+              />
+              <p>
+                <a href="#">
+                  <h3>Кваст</h3>
+                </a>
+                Промо-сайт производителя крафтового кваса
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a>1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+            <li>
+              <a href="#">Следующая</a>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
     <footer>
-      <section>
+      <section class="contacts">
         <div class="container">
-          <h2>Контакты</h2>
-          <p>Nёrds design studio</p>
-          <p>
-            наб. Реки Карповки, 5 лит П, Санкт-Петербург <br /><br />+7 800
-            555-86-28
-          </p>
-          <button type="button">Напишите нам</button>
+          <h2 class="hidden">Контакты</h2>
+          <div class="contacts-block">
+            <h4>Nёrds design studio</h4>
+            <address>наб. Реки Карповки, 5 лит П, Санкт-Петербург</address>
+            <a href="tel:+7800558628">+7 800 555-86-28</a>
+            <button class="button contacts-button" type="button">
+              Напишите нам
+            </button>
+          </div>
         </div>
       </section>
-      <section class="container">
-        <h2>Мы в социальных сетях</h2>
-        <ul>
+      <section class="social-media container">
+        <ul class="social-media-list">
           <li>
-            <a href="#"
-              ><img src="" width="26" height="15" alt="Логотип: Вконтакте"
+            <a class="social-media-icon" href="#"
+              ><img
+                src="img\icons\vk.svg"
+                width="26"
+                height="15"
+                alt="Логотип: Вконтакте"
             /></a>
           </li>
           <li>
-            <a href="#"
-              ><img src="" width="12" height="22" alt="Логотип: Facebook"
+            <a class="social-media-icon" href="#"
+              ><img
+                src="img\icons\facebook.svg"
+                width="12"
+                height="22"
+                alt="Логотип: Facebook"
             /></a>
           </li>
           <li>
-            <a href="#"
-              ><img src="" width="21" height="21" alt="Логотип: Instagram"
+            <a class="social-media-icon" href="#"
+              ><img
+                src="img\icons\instagram.svg"
+                width="21"
+                height="21"
+                alt="Логотип: Instagram"
             /></a>
           </li>
         </ul>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <div class="social-media-text">
+          <p class="social-media-text-large">Давайте дружить, это выгодно!</p>
+          <p class="social-media-sale">
+            Скидка 10% для друзей из социальных сетей.
+          </p>
+        </div>
       </section>
     </footer>
-    <section>
+    <section class="modal hidden">
       <h2>Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <label
-          >Ваше имя:
-          <input name="name" type="text" placeholder="Имя Фамилия" />
-        </label>
-        <label
-          >Ваш email:
-          <input type="email" name="email" placeholder="email@example.com" />
-        </label>
-        <label>
+        <div class="modal-inputs-wrapper">
+          <label class="modal-name"
+            >Ваше имя:
+            <input name="name" type="text" placeholder="Имя Фамилия" />
+          </label>
+          <label
+            >Ваш email:
+            <input type="email" name="email" placeholder="email@example.com" />
+          </label>
+        </div>
+        <label class="modal-textarea">
+          Текст письма:
           <textarea
             name="text"
             cols="30"
@@ -286,9 +322,11 @@
             placeholder="В свободной форме"
           ></textarea>
         </label>
-        <button type="submit">Отправить</button>
+        <button class="button modal-button" type="submit">Отправить</button>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="close" type="button">
+        <img src="img/icons/close.svg" alt="Закрыть" />
+      </button>
     </section>
   </body>
 </html>
