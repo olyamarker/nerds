@@ -77,43 +77,93 @@
           <fieldset class="filter-item">
             <legend>Сетка:</legend>
             <ul>
-              <li>
-                <label
-                  ><input type="radio" name="grid" checked />Адаптивная</label
+              <li class="filter-option filter-radio">
+                <input
+                  class="hidden filter-input filter-input-radio"
+                  type="radio"
+                  name="grid"
+                  id="filter-adaptive"
+                  checked
+                />
+                <label for="filter-adaptive" class="radio option"
+                  >Адаптивная</label
                 >
               </li>
-              <li>
-                <label><input type="radio" name="grid" />Фиксированная</label>
+              <li class="filter-option filter-radio">
+                <input
+                  class="hidden filter-input filter-input-radio"
+                  type="radio"
+                  name="grid"
+                  id="filter-fix"
+                  checked
+                />
+                <label for="filter-fix" class="radio option"
+                  >Фиксированная</label
+                >
               </li>
-              <li>
-                <label><input type="radio" name="grid" />Резиновая</label>
+              <li class="filter-option filter-radio">
+                <input
+                  class="hidden filter-input filter-input-radio"
+                  type="radio"
+                  name="grid"
+                  id="filter-responsive"
+                  checked
+                />
+                <label for="filter-responsive" class="radio option"
+                  >Резиновая</label
+                >
               </li>
             </ul>
           </fieldset>
           <fieldset class="filter-item">
             <legend>Особенности:</legend>
             <ul>
-              <li>
-                <label>
-                  <input type="checkbox" name="slider" checked />Слайдер
-                </label>
+              <li class="filter-option filter-checkbox">
+                <input
+                  class="hidden filter-input filter-input-checkbox"
+                  type="checkbox"
+                  name="slider"
+                  id="filter-slider"
+                  checked
+                />
+                <label for="filter-slider">Слайдер</label>
               </li>
-              <li>
-                <label>
-                  <input type="checkbox" name="benefits" />Блок
-                  преимуществ</label
-                >
+              <li class="filter-option filter-checkbox">
+                <input
+                  class="hidden filter-input filter-input-checkbox"
+                  type="checkbox"
+                  name="benefits"
+                  id="filter-benefits"
+                />
+                <label for="filter-benefits">Блок преимуществ</label>
               </li>
-              <li>
-                <label>
-                  <input type="checkbox" name="news" checked />Новости</label
-                >
+              <li class="filter-option filter-checkbox">
+                <input
+                  class="hidden filter-input filter-input-checkbox"
+                  type="checkbox"
+                  name="news"
+                  id="filter-news"
+                  checked
+                />
+                <label for="filter-news">Новости</label>
               </li>
-              <li>
-                <label> <input type="checkbox" name="gallery" />Галерея</label>
+              <li class="filter-option filter-checkbox">
+                <input
+                  class="hidden filter-input filter-input-checkbox"
+                  type="checkbox"
+                  name="gallery"
+                  id="filter-gallery"
+                />
+                <label for="filter-gallery">Галерея</label>
               </li>
-              <li>
-                <label> <input type="checkbox" name="basket" />Корзина</label>
+              <li class="filter-option filter-checkbox">
+                <input
+                  class="hidden filter-input filter-input-checkbox"
+                  type="checkbox"
+                  name="basket"
+                  id="filter-busket"
+                />
+                <label for="filter-busket">Корзина</label>
               </li>
             </ul>
           </fieldset>
