@@ -20,6 +20,7 @@
   --slider: #c1c1c1;
   --form-border: #d7dcde;
   --filter-control: #4d4d4d;
+  --sorting-button: #231f20;
 }
 
 .hidden {
@@ -370,6 +371,69 @@ img {
   color: var(--basic-black);
   background: var(--basic-bg);
   border-radius: 3px;
+}
+
+/* Сортировка */
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sorting-title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.sorting-list {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sorting-list li {
+  margin-left: 25px;
+}
+
+.sorting-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 42px;
+}
+
+.sorting-button {
+  border: none;
+  display: flex;
+  width: 10px;
+  height: 11px;
+  background: transparent;
+  background-image: url(../img/icons/sort-icon.svg);
+}
+
+.sorting-button-up {
+  margin-left: 18px;
+}
+
+.sorting-button-down {
+  transform: scale(-1);
+}
+.sorting-button-down path {
+  fill: var(--sorting-button);
+}
+
+/* Результаты */
+
+.results-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
 /* Услуги */
