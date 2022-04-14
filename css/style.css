@@ -120,6 +120,11 @@ img {
   color: var(--red);
 }
 
+.page-link:active {
+  color: inherit;
+  opacity: 0.3;
+}
+
 .logo:hover {
   opacity: 0.7;
 }
@@ -145,6 +150,11 @@ img {
 
 .cart:hover a{
   color: var(--red);
+}
+
+.cart:active a{
+  color: inherit;
+  opacity: 0.3;
 }
 
 .cart-icon {
