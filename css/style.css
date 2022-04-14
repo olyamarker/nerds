@@ -116,6 +116,14 @@ img {
   color: var(--basic-black);
 }
 
+.logo:hover {
+  opacity: 0.7;
+}
+
+.logo:active {
+  opacity: 0.3;
+}
+
 .current-page-link {
   padding-bottom: 13px;
   border-bottom: 2px solid var(--red);
