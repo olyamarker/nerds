@@ -22,6 +22,13 @@
   --filter-control: #4d4d4d;
   --sorting-button: #231f20;
   --active-page: #dbdbdb;
+  --button-hover: #E74246;
+  --button-active: #D7373B;
+  --button-green-hover: #00BC6C;
+  --button-green-active: #00AA62;
+  --button-yellow-hover: #EAB534;
+  --button-yellow-active: #E5A722;
+  --button-active-color: rgba(255, 255, 255, .3);
 }
 
 .hidden {
@@ -214,6 +221,16 @@ img {
   text-transform: uppercase;
   background-color: var(--red);
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+}
+
+.button:active {
+  background: var(--button-active);
+box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+color: var(--button-active-color);
 }
 
 .slide-button {
@@ -592,6 +609,30 @@ img {
 .services-button {
   margin-top: 32px;
   width: 160px;
+}
+
+.services-button-green {
+  background-color: var(--green);
+}
+
+.services-button-green:hover {
+  background-color: var(--button-green-hover);
+}
+
+.services-button-green:active {
+  background-color: var(--button-green-active);
+}
+
+.services-button-yellow {
+  background-color: var(--yellow);
+}
+
+.services-button-yellow:hover {
+  background-color: var(--button-yellow-hover);
+}
+
+.services-button-yellow:active {
+  background-color: var(--button-yellow-active);
 }
 
 /* О компании */
