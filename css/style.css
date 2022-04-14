@@ -46,7 +46,7 @@
 
 .container {
   margin: auto;
-  max-width: 1190px;
+  width: 1190px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -736,7 +736,16 @@ color: var(--button-active-color);
 }
 
 .clients img {
+  cursor: pointer;
   opacity: 0.2;
+}
+
+.clients img:hover {
+  opacity: 1;
+}
+
+.clients img:active {
+  opacity: 0.1;
 }
 
 .clients li {
@@ -748,7 +757,7 @@ color: var(--button-active-color);
   content: "";
   height: 52px;
   width: 2px;
-  margin-left: 56px;
+  margin-left: 48px;
   background-color: var(--basic-bg);
 }
 
