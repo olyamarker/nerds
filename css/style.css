@@ -229,8 +229,8 @@ img {
 
 .button:active {
   background: var(--button-active);
-box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-color: var(--button-active-color);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: var(--button-active-color);
 }
 
 .slide-button {
@@ -820,6 +820,20 @@ color: var(--button-active-color);
   height: 81px;
   border-radius: 50%;
   background: var(--bg-icon);
+}
+
+.social-media-icon:hover {
+  background-color: var(--button-hover);
+}
+
+.social-media-icon:active {
+  background: var(--button-active);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: var(--button-active-color);
+}
+
+.social-media-icon:active img {
+  opacity: 0.3;
 }
 
 .social-media-list {
