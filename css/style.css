@@ -9,6 +9,7 @@
   --basic-bg: #eeeeee;
 
   --secondary-text: #444444;
+  --secondary-text-opacity50: rgba(68, 68, 68, 0.);
   --secondary-text-ligher: #666666;
 
   --red: #fb565a;
@@ -19,6 +20,7 @@
   --bg-icon: #e1e1e1;
   --slider: #c1c1c1;
   --form-border: #d7dcde;
+  --form-border-hover: #B4B9BB;
   --filter-control: #4d4d4d;
   --sorting-button: #231f20;
   --active-page: #dbdbdb;
@@ -919,8 +921,7 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  opacity: 0.5;
-  color: var(--secondary-text);
+  color: var(--secondary-text-opacity50);
   border: 2px solid var(--form-border);
   border-radius: 3px;
 }
@@ -929,6 +930,14 @@ img {
   width: 100%;
   height: 118px;
   resize: none;
+}
+
+.modal input:hover, .modal textarea:hover {
+  border-color: var(--form-border-hover);
+}
+
+.modal input:active {
+  border-color: var(--basic-black);
 }
 
 .modal-button {
@@ -947,4 +956,8 @@ img {
 
 .close:hover {
   opacity: 1;
+}
+
+.close:active {
+  opacity: 0.1;
 }
