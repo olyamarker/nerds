@@ -9,7 +9,6 @@
   --basic-bg: #eeeeee;
 
   --secondary-text: #444444;
-  --secondary-text-opacity50: rgba(68, 68, 68, 0.);
   --secondary-text-ligher: #666666;
 
   --red: #fb565a;
@@ -31,6 +30,9 @@
   --button-yellow-hover: #EAB534;
   --button-yellow-active: #E5A722;
   --button-active-color: rgba(255, 255, 255, .3);
+  --button-secondary-hover: #DFDFDF;
+  --button-secondary-active: #D5D5D5;
+  --button-secondary-active-color: rgba(0, 0, 0, 0.3);
 }
 
 .hidden {
@@ -235,6 +237,24 @@ img {
   color: var(--button-active-color);
 }
 
+.secondary-button {
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 17px;
+  color: var(--basic-black);
+  background: var(--basic-bg);
+  border-radius: 3px;
+}
+
+.secondary-button:hover {
+  background-color: var(--button-secondary-hover);
+}
+
+.secondary-button:active {
+  background-color: var(--button-secondary-active);
+  color:var(--button-secondary-active-color);
+}
+
 .slide-button {
   margin-top: 38px;
 }
@@ -416,12 +436,6 @@ img {
 .filter-button {
   margin-top: 28px;
   width: 100%;
-  border: none;
-  padding-top: 15px;
-  padding-bottom: 17px;
-  color: var(--basic-black);
-  background: var(--basic-bg);
-  border-radius: 3px;
 }
 
 /* Сортировка */
@@ -559,15 +573,14 @@ img {
   margin-right: 11px;
 }
 
-.results-page-nav-button {
-  background-color: var(--basic-bg);
-  color: var(--basic-black);
-}
-
-.results-page-nav li:first-child .results-page-nav-button {
+.results-page-nav-button-active, .results-page-nav-button-active:hover, .results-page-nav-button-active:active {
+  cursor:default;
+  color: inherit;
+  box-shadow: inset 0px 0px 0px #000;
   background-color: var(--basic-white);
   border: 3px solid var(--active-page);
 }
+
 /* Услуги */
 
 .services {
@@ -824,16 +837,6 @@ img {
   background: var(--bg-icon);
 }
 
-.social-media-icon:hover {
-  background-color: var(--button-hover);
-}
-
-.social-media-icon:active {
-  background: var(--button-active);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  color: var(--button-active-color);
-}
-
 .social-media-icon:active img {
   opacity: 0.3;
 }
@@ -918,12 +921,17 @@ img {
   padding: 16px;
   height: 50px;
   width: 360px;
-  font-weight: 400;
+  font-family: inherit;
   font-size: 16px;
   line-height: 18px;
-  color: var(--secondary-text-opacity50);
+  color: var(--secondary-text);
   border: 2px solid var(--form-border);
   border-radius: 3px;
+}
+
+.modal input::placeholder, .modal textarea::placeholder {
+  color: var(--secondary-text);
+  opacity: 0.5;
 }
 
 .modal textarea {
@@ -938,6 +946,10 @@ img {
 
 .modal input:active {
   border-color: var(--basic-black);
+}
+
+.modal input:invalid {
+  border-color: red;
 }
 
 .modal-button {
