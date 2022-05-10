@@ -396,6 +396,10 @@ img {
   opacity: 0.4;
 }
 
+.filter-input-checkbox:hover + label::before {
+  opacity: 1;
+}
+
 .filter-input-checkbox:checked + label::before {
   content: "";
   position: absolute;
@@ -407,6 +411,12 @@ img {
   background-repeat: no-repeat;
   background-position: 0 0;
   border: none;
+}
+
+.filter-input-checkbox:disabled + label,
+.filter-input-checkbox:disabled + label::before{
+  cursor: default;
+  opacity: 0.3;
 }
 
 .filter-input-radio + label::before {
@@ -431,6 +441,21 @@ img {
   background-color: var(--filter-control);
   opacity: 0.4;
   border-radius: 50%;
+}
+
+.filter-input-radio:hover + label::before {
+  opacity: 1;
+}
+
+.filter-input-radio:checked:hover + label::after {
+  opacity: 1;
+}
+
+.filter-input-radio:disabled + label,
+.filter-input-radio:disabled + label::before,
+.filter-input-radio:disabled + label::after{
+  opacity: 0.3;
+  cursor: default;
 }
 
 .filter-button {
@@ -458,14 +483,35 @@ img {
   margin: 0;
   display: flex;
   align-items: center;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
-.sorting-list li {
+.sorting-item {
   margin-left: 25px;
+  opacity: 0.3;
+}
+
+.sorting-item:hover {
+  opacity: 0.6;
+}
+
+.sorting-item:active {
+  opacity: 1;
+}
+
+.sorting-item-active {
+  opacity: 1;
+}
+
+.sorting-item-active:hover {
+  opacity: 1;
+}
+
+.sorting-item-active:hover a{
+  cursor: default;
 }
 
 .sorting-buttons {
@@ -490,8 +536,28 @@ img {
 .sorting-button-down {
   transform: scale(-1);
 }
+
 .sorting-button-down path {
   fill: var(--sorting-button);
+}
+
+.sorting-button {
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.sorting-button:hover {
+  opacity: 0.6;
+}
+
+.sorting-button-active {
+  opacity: 1;
+  cursor: default;
+}
+
+.sorting-button-active:hover {
+  opacity: 1;
+  cursor: default;
 }
 
 /* Результаты */
@@ -555,6 +621,15 @@ img {
   font-size: 18px;
   line-height: 30px;
   color: var(--basic-text);
+}
+
+.results-template-description h3:hover {
+  color: var(--red);
+}
+
+.results-template-description h3:active{
+  color: inherit;
+  opacity: 0.3;
 }
 
 .results-template-button {
