@@ -117,6 +117,9 @@ img {
 
 .nav ul {
   display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-wrap: wrap;
 }
 
 .nav li {
@@ -675,6 +678,7 @@ img {
   display: flex;
   flex-direction: column;
   max-width: 300px;
+  /* margin-bottom: 10px; */
 }
 
 .services-list img {
@@ -790,6 +794,8 @@ img {
 
 .about-data-pair {
   margin-right: 20px;
+  max-width: 110px;
+  word-wrap: break-word;
 }
 
 .about-data dt {
@@ -813,7 +819,7 @@ img {
 /* Клиенты */
 
 .clients {
-  padding: 46px 42px 44px 32px;
+  padding: 46px 42px 24px 32px;
   margin-bottom: 80px;
   border-bottom: 2px solid var(--basic-bg);
 }
@@ -823,6 +829,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .clients img {
@@ -841,6 +848,7 @@ img {
 .clients li {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .clients li:not(:last-child)::after {
@@ -856,9 +864,11 @@ img {
 /* Контакты */
 
 .contacts {
+  width: 100%;
   padding-top: 54px;
   padding-bottom: 54px;
   background-image: url(../img/map.png);
+  background-size: 100%;
 }
 
 .contacts-block {
@@ -919,10 +929,12 @@ img {
 .social-media-list {
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .social-media-list li {
   margin-right: 9px;
+  margin-bottom: 10px;
 }
 
 .social-media-text {
