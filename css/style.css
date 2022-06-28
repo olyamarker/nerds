@@ -281,7 +281,7 @@ img {
   grid-template-columns: 260px 760px;
   grid-column-gap: 140px;
   padding-top: 55px;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
 
 .filter-item {
@@ -644,11 +644,13 @@ img {
   margin: 0;
   margin-top: 54px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .results-page-nav li:not(:last-child) .results-page-nav-button {
   width: 50px;
   margin-right: 11px;
+  margin-bottom: 10px;
 }
 
 .results-page-nav-button-active, .results-page-nav-button-active:hover, .results-page-nav-button-active:active {
