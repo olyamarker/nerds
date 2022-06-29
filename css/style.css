@@ -870,6 +870,7 @@ img {
   padding-top: 54px;
   padding-bottom: 54px;
   background-image: url(../img/map.png);
+  background-color: var(--active-page);
   background-size: 100%;
 }
 
