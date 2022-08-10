@@ -699,8 +699,10 @@ img {
 }
 
 .results-page-nav-button-active, .results-page-nav-button-active:hover, .results-page-nav-button-active:active {
-  cursor:default;
+  cursor: default;
   color: inherit;
+  padding-top: 12px;
+  padding-bottom: 14px;
   box-shadow: inset 0px 0px 0px #000;
   background-color: var(--basic-white);
   border: 3px solid var(--active-page);
