@@ -506,6 +506,10 @@ img {
   cursor: default;
 }
 
+.filter-input-checkbox:focus + label::before, .filter-input-radio:focus + label::before {
+  outline: 4px solid black;
+}
+
 .filter-button {
   margin-top: 28px;
   width: 100%;
@@ -645,6 +649,7 @@ img {
 }
 
 .results-template-description {
+  opacity: 0;
   position: absolute;
   bottom: 0px;
   padding: 26px 52px 44px;
@@ -659,6 +664,14 @@ img {
   text-align: center;
   background-color: var(--basic-bg);
   border-radius: 0px 0px 5px 5px;
+}
+
+.results-list li:focus-within .results-template-description {
+  opacity: 100%;
+}
+
+.results-list li:hover .results-template-description {
+  opacity: 100%;
 }
 
 .results-template-description h3 {
