@@ -189,6 +189,11 @@ img {
 .slide {
   padding-top: 78px;
   padding-bottom: 80px;
+  display: none;
+}
+
+.slide-current {
+  display: block;
 }
 
 .slide-1 {
