@@ -176,6 +176,16 @@ img {
   margin-bottom: 2px;
 }
 
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.slides {
+  flex-basis: 100%;
+}
+
 .slide {
   padding-top: 78px;
   padding-bottom: 80px;
@@ -209,6 +219,37 @@ img {
   max-width: 416px;
   margin: 0;
   margin-top: 25px;
+}
+
+.slider-buttons {
+  position: absolute;
+  display: flex;
+  bottom: 96px;
+}
+
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--basic-white);
+}
+
+.slider-button:not(:last-child) {
+  margin-right: 17px;
+}
+
+.slider-button-current::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 2px solid var(--slider);
 }
 
 .button {
