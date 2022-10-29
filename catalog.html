@@ -10,7 +10,8 @@
       rel="stylesheet"
     />
     <link href="css/normalize.css" rel="stylesheet" />
-    <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- заменить на min.css -->
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="favicon/180.png" />
@@ -83,6 +84,7 @@
                   type="radio"
                   name="grid"
                   id="filter-adaptive"
+                  value="adaptive"
                   checked
                 />
                 <label for="filter-adaptive"
@@ -95,6 +97,7 @@
                   type="radio"
                   name="grid"
                   id="filter-fix"
+                  value="fix"
                   checked
                 />
                 <label for="filter-fix"
@@ -107,6 +110,7 @@
                   type="radio"
                   name="grid"
                   id="filter-responsive"
+                  value="responsive"
                   checked
                 />
                 <label for="filter-responsive"
@@ -122,8 +126,9 @@
                 <input
                   class="hidden filter-input filter-input-checkbox"
                   type="checkbox"
-                  name="slider"
+                  name="features"
                   id="filter-slider"
+                  value="slider"
                   checked
                 />
                 <label for="filter-slider">Слайдер</label>
@@ -132,8 +137,9 @@
                 <input
                   class="hidden filter-input filter-input-checkbox"
                   type="checkbox"
-                  name="benefits"
+                  name="features"
                   id="filter-benefits"
+                  value="benefits"
                 />
                 <label for="filter-benefits">Блок преимуществ</label>
               </li>
@@ -141,8 +147,9 @@
                 <input
                   class="hidden filter-input filter-input-checkbox"
                   type="checkbox"
-                  name="news"
+                  name="features"
                   id="filter-news"
+                  value="news"
                   checked
                 />
                 <label for="filter-news">Новости</label>
@@ -151,8 +158,9 @@
                 <input
                   class="hidden filter-input filter-input-checkbox"
                   type="checkbox"
-                  name="gallery"
+                  name="features"
                   id="filter-gallery"
+                  value="gallery"
                 />
                 <label for="filter-gallery">Галерея</label>
               </li>
@@ -160,8 +168,9 @@
                 <input
                   class="hidden filter-input filter-input-checkbox"
                   type="checkbox"
-                  name="basket"
+                  name="features"
                   id="filter-busket"
+                  value="busket"
                 />
                 <label for="filter-busket">Корзина</label>
               </li>
@@ -184,26 +193,29 @@
               <a href="#">По названию</a>
             </li>
             <div class="sorting-buttons">
-              <svg
-                class="sorting-button sorting-button-active sorting-button-down"
-                width="11"
-                height="10"
-                viewBox="0 0 11 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
-              </svg>
-              <svg
+              <a href="#" aria-label="Сортировать по убыванию">
+                <svg aria-hidden="true" class="sorting-button sorting-button-active sorting-button-down"
+                      width="11"
+                      height="10"
+                      viewBox="0 0 11 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
+                </svg>
+              </a>
+              <a href="#" aria-label="Сортировать по возрастанию">
+                <svg aria-hidden="true"
                 class="sorting-button sorting-button-up"
                 width="11"
                 height="10"
                 viewBox="0 0 11 10"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
-              </svg>
+                >
+                  <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
+                </svg>
+              </a>
             </div>
           </ul>
         </section>
@@ -222,9 +234,9 @@
                   <h3>Sedona</h3>
                 </a>
                 Информационный сайт для туристов
-                <button class="button results-template-button" type="button">
+                <a href="#" class="button results-template-button">
                   9 900 ₽
-                </button>
+                </a>
               </div>
             </li>
             <li>
@@ -239,9 +251,9 @@
                   <h3>Pink App</h3>
                 </a>
                 Продуктовый лендинг приложения для iOS и Android
-                <button class="button results-template-button" type="button">
+                <a href="#" class="button results-template-button">
                   9 900 ₽
-                </button>
+                </a>
               </div>
             </li>
             <li>
@@ -256,9 +268,9 @@
                   <h3>Barbershop</h3>
                 </a>
                 Сайт салона красоты. </br>Для мужчин, да.
-                <button class="button results-template-button" type="button">
+                <a href="#" class="button results-template-button">
                   9 900 ₽
-                </button>
+                </a>
               </div>
             </li>
             <li>
@@ -273,9 +285,9 @@
                   <h3>Mishka</h3>
                 </a>
                 Интернет-магазин <br>вязаных игрушек
-                <button class="button results-template-button" type="button">
+                <a href="#" class="button results-template-button">
                   9 900 ₽
-                </button>
+                </a>
               </div>
             </li>
             <li>
@@ -290,9 +302,9 @@
                   <h3>A Plus</h3>
                 </a>
                 Лендинг курсов повышения квалификации
-                <button class="button results-template-button" type="button">
+                <a href="#" class="button results-template-button">
                   9 900 ₽
-                </button>
+                </a>
               </div>
             </li>
             <li>
@@ -307,9 +319,9 @@
                   <h3>Кваст</h3>
                 </a>
                 Промо-сайт производителя<br>крафтового кваса
-                <button class="button results-template-button" type="button">
+                <a href="#" class="button results-template-button">
                   9 900 ₽
-                </button>
+                </a>
               </div>
             </li>
           </ul>
@@ -382,7 +394,7 @@
         </div>
       </section>
     </footer>
-    <section class="modal hidden">
+    <section class="modal">
       <h2>Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <div class="modal-inputs-wrapper">
@@ -407,7 +419,7 @@
         <button class="button modal-button" type="submit">Отправить</button>
       </form>
       <button class="close" type="button">
-        <img src="img/icons/close.svg" alt="Закрыть" />
+        <img src="img/icons/close.svg" alt="Закрыть форму связи" />
       </button>
     </section>
 

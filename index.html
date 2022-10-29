@@ -10,7 +10,8 @@
       rel="stylesheet"
     />
     <link href="css/normalize.css" rel="stylesheet" />
-    <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Не забудь подключить MIN в конце -->
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="favicon/180.png" />
@@ -39,31 +40,52 @@
             <a href="blank.html">Корзина</a>
           </div>
         </nav>
-        <div class="slide slide-1">
-          <p class="slide-text-large">Долго, дорого, <br />скрупулезно.</p>
-          <p class="slide-text">
-            Математически выверенный дизайн <br />для вашего сайта или
-            мобильного приложения.
-          </p>
-          <a class="button slide-button">Узнать больше</a>
-        </div>
-        <div class="slide slide-2 hidden">
-          <p class="slide-text-large">
-            Любим математику <br />как никто другой
-          </p>
-          <p class="slide-text">
-            Никакого креатива, только математические формулы для расчета
-            идеальных пропорций
-          </p>
-          <a class="button slide-button">Узнать больше</a>
-        </div>
-        <div class="slide slide-3 hidden">
-          <p class="slide-text-large">Только ночь, <br />только хардкор</p>
-          <p class="slide-text">
-            Работать днем, как все? Мы против этого.<br />Ближе к полуночи
-            работа только начинается.
-          </p>
-          <a class="button slide-button">Узнать больше</a>
+        <div class="slider">
+          <div class="slides">
+            <div class="slide slide-1 slide-current">
+              <p class="slide-text-large">Долго, дорого, <br />скрупулезно.</p>
+              <p class="slide-text">
+                Математически выверенный дизайн <br />для вашего сайта или
+                мобильного приложения.
+              </p>
+              <a href="#" class="button slide-button">Узнать больше</a>
+            </div>
+            <div class="slide slide-2">
+              <p class="slide-text-large">
+                Любим математику <br />как никто другой
+              </p>
+              <p class="slide-text">
+                Никакого креатива, только математические формулы для расчета
+                идеальных пропорций
+              </p>
+              <a href="#" class="button slide-button">Узнать больше</a>
+            </div>
+            <div class="slide slide-3">
+              <p class="slide-text-large">Только ночь, <br />только хардкор</p>
+              <p class="slide-text">
+                Работать днем, как все? Мы против этого.<br />Ближе к полуночи
+                работа только начинается.
+              </p>
+              <a href="#" class="button slide-button">Узнать больше</a>
+            </div>
+          </div>
+          <div class="slider-buttons">
+            <button
+              type="button"
+              class="slider-button slider-button-current"
+              aria-label="Первый слайд"
+            ></button>
+            <button
+              type="button"
+              class="slider-button"
+              aria-label="Второй слайд"
+            ></button>
+            <button
+              type="button"
+              class="slider-button"
+              aria-label="Третий слайд"
+            ></button>
+          </div>
         </div>
       </div>
     </header>
@@ -76,7 +98,12 @@
             <h3>Веб-сайты</h3>
             <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
             <img src="img/services/sites.png" width="300" height="146" alt="" />
-            <a class="button services-button" href="blank.html">Заказать</a>
+            <a
+              class="button services-button"
+              href="blank.html"
+              aria-label="Заказать веб-сайт"
+              >Заказать</a
+            >
           </li>
           <li>
             <h3>Приложения</h3>
@@ -85,6 +112,7 @@
             <a
               class="button services-button services-button-green"
               href="blank.html"
+              aria-label="Заказать приложение"
               >Заказать</a
             >
           </li>
@@ -100,6 +128,7 @@
             <a
               class="button services-button services-button-yellow"
               href="blank.html"
+              aria-label="Заказать презентацию"
               >Заказать</a
             >
           </li>
@@ -150,36 +179,41 @@
         <h2 class="hidden">Клиенты</h2>
         <ul>
           <li>
-            <img
-              width="199"
-              height="57"
-              src="img/clients/htmlacademy.svg"
-              alt="Логотип: «Html Academy»"
-            />
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img
+                width="199"
+                height="57"
+                src="img/clients/htmlacademy.svg"
+                alt="Логотип: «Html Academy»"
+              />
+            </a>
           </li>
           <li>
-            <img
-              width="209"
-              height="90"
-              src="img/clients/borodinski.png"
-              alt="Логотип: «Бородинский»"
-            />
+            <a href="#"
+              ><img
+                width="209"
+                height="90"
+                src="img/clients/borodinski.png"
+                alt="Логотип: «Бородинский»"
+            /></a>
           </li>
           <li>
-            <img
-              width="185"
-              height="52"
-              src="img/clients/pink.png"
-              alt="Логотип: «Pink»"
-            />
+            <a href="#"
+              ><img
+                width="185"
+                height="52"
+                src="img/clients/pink.png"
+                alt="Логотип: «Pink»"
+            /></a>
           </li>
           <li>
-            <img
-              width="173"
-              height="84"
-              src="img/clients/mishka.png"
-              alt="Логотип: «Мишка»"
-            />
+            <a href="#"
+              ><img
+                width="173"
+                height="84"
+                src="img/clients/mishka.png"
+                alt="Логотип: «Мишка»"
+            /></a>
           </li>
         </ul>
       </section>
@@ -192,7 +226,11 @@
             <h4>Nёrds design studio</h4>
             <address>наб. Реки Карповки, 5 лит П, Санкт-Петербург</address>
             <a href="tel:+7800558628">+7 800 555-86-28</a>
-            <button class="button contacts-button" type="button">
+            <button
+              class="button contacts-button"
+              type="button"
+              aria-label="Открыть форму обратной связи"
+            >
               Напишите нам
             </button>
           </div>
@@ -262,7 +300,7 @@
         <button class="button modal-button" type="submit">Отправить</button>
       </form>
       <button class="close" type="button">
-        <img src="img/icons/close.svg" alt="Закрыть" />
+        <img src="img/icons/close.svg" alt="Закрыть форму связи" />
       </button>
     </section>
 

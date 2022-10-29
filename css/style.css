@@ -176,9 +176,24 @@ img {
   margin-bottom: 2px;
 }
 
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.slides {
+  flex-basis: 100%;
+}
+
 .slide {
   padding-top: 78px;
   padding-bottom: 80px;
+  display: none;
+}
+
+.slide-current {
+  display: block;
 }
 
 .slide-1 {
@@ -209,6 +224,37 @@ img {
   max-width: 416px;
   margin: 0;
   margin-top: 25px;
+}
+
+.slider-buttons {
+  position: absolute;
+  display: flex;
+  bottom: 96px;
+}
+
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--basic-white);
+}
+
+.slider-button:not(:last-child) {
+  margin-right: 17px;
+}
+
+.slider-button-current::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 2px solid var(--slider);
 }
 
 .button {
@@ -460,6 +506,10 @@ img {
   cursor: default;
 }
 
+.filter-input-checkbox:focus + label::before, .filter-input-radio:focus + label::before {
+  outline: 4px solid black;
+}
+
 .filter-button {
   margin-top: 28px;
   width: 100%;
@@ -599,6 +649,7 @@ img {
 }
 
 .results-template-description {
+  opacity: 0;
   position: absolute;
   bottom: 0px;
   padding: 26px 52px 44px;
@@ -613,6 +664,14 @@ img {
   text-align: center;
   background-color: var(--basic-bg);
   border-radius: 0px 0px 5px 5px;
+}
+
+.results-list li:focus-within .results-template-description {
+  opacity: 100%;
+}
+
+.results-list li:hover .results-template-description {
+  opacity: 100%;
 }
 
 .results-template-description h3 {
@@ -653,8 +712,10 @@ img {
 }
 
 .results-page-nav-button-active, .results-page-nav-button-active:hover, .results-page-nav-button-active:active {
-  cursor:default;
+  cursor: default;
   color: inherit;
+  padding-top: 12px;
+  padding-bottom: 14px;
   box-shadow: inset 0px 0px 0px #000;
   background-color: var(--basic-white);
   border: 3px solid var(--active-page);
@@ -971,6 +1032,7 @@ img {
   transform: translate(-50%, -50%);
   background-color: var(--basic-white);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  display: none;
 }
 
 .modal h2 {
