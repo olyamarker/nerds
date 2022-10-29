@@ -950,7 +950,7 @@ img {
 }
 
 .contacts-block address,
-.contacts-block a {
+.contacts-block a:not(.contacts-button) {
   margin-top: 23px;
   font-style: normal;
   font-weight: 400;
@@ -959,9 +959,8 @@ img {
   color: var(--secondary-text-ligher);
 }
 
-.contacts-block a {
-  display: block;
-  margin-top: 18px;
+.contacts-block a.contacts-button {
+  color: var(--basic-white);
 }
 
 .contacts-button {
@@ -1026,13 +1025,26 @@ img {
 
 .modal {
   position: fixed;
+  width: 960px;
+  height: 590px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
   padding: 63px 100px 84px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: var(--basic-white);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
-  display: none;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal h2 {
@@ -1125,4 +1137,45 @@ img {
 
 .close:active {
   opacity: 0.1;
+}
+
+/* Анимация */
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%{
+    transform: translateX(10px);
+  }
 }

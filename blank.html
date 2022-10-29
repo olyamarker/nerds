@@ -10,7 +10,8 @@
       rel="stylesheet"
     />
     <link href="css/normalize.css" rel="stylesheet" />
-    <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- заменить на min -->
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="favicon/180.png" />
@@ -52,9 +53,13 @@
             <h4>Nёrds design studio</h4>
             <address>наб. Реки Карповки, 5 лит П, Санкт-Петербург</address>
             <a href="tel:+7800558628">+7 800 555-86-28</a>
-            <button class="button contacts-button" type="button">
+            <a
+              class="button contacts-button"
+              href="blank.html"
+              aria-label="Открыть форму обратной связи"
+            >
               Напишите нам
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -96,6 +101,35 @@
         </div>
       </section>
     </footer>
+
+    <section class="modal hidden">
+      <h2>Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal-inputs-wrapper">
+          <label class="modal-name"
+            >Ваше имя:
+            <input name="name" type="text" placeholder="Имя Фамилия" />
+          </label>
+          <label
+            >Ваш email:
+            <input type="email" name="email" placeholder="email@example.com" />
+          </label>
+        </div>
+        <label class="modal-textarea">
+          Текст письма:
+          <textarea
+            name="text"
+            cols="30"
+            rows="10"
+            placeholder="В свободной форме"
+          ></textarea>
+        </label>
+        <button class="button modal-button" type="submit">Отправить</button>
+      </form>
+      <button class="close" type="button">
+        <img src="img/icons/close.svg" alt="Закрыть форму связи" />
+      </button>
+    </section>
 
     <script src="js/script.js"></script>
   </body>
