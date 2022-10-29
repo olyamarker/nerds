@@ -65,3 +65,25 @@ window.addEventListener('keydown', function(evt) {
     }
   }
 });
+
+// Слайдер
+
+const slides = document.querySelectorAll('.slide');
+const sliderButtons = document.querySelectorAll('.slider-button');
+let currentSlide = document.querySelector('.slide-current');
+let currentButton = document.querySelector('.slider-button-current');
+
+let addSliderButtonClickHandler = function (sliderButton, slide) {
+  sliderButton.addEventListener('click', function() {
+    currentSlide.classList.remove('slide-current');
+    currentButton.classList.remove('slider-button-current');
+    slide.classList.add('slide-current');
+    sliderButton.classList.add('slider-button-current');
+    currentSlide = slide;
+    currentButton = sliderButton;
+  })
+};
+
+for (let i = 0; i < slides.length; i++) {
+  addSliderButtonClickHandler(sliderButtons[i], slides[i]);
+}
