@@ -1,3 +1,5 @@
+// Модальное окно
+// Подключить min!
 const modalLink = document.querySelector('.contacts-button');
 const modalPopup = document.querySelector('.modal');
 const modalClose = modalPopup.querySelector('.close');
